@@ -1,0 +1,21 @@
+body {
+  background-color: #1f4563;
+}
+.jumbotron {
+  background-color: #81dd818f;
+  background-size: 100% 100%;
+  text-align: center;
+  color: white;
+}
+
+
+.article-title, .article-p {
+  padding: 20px;
+}
+form {
+  padding: 5px;
+}
+
+#filter-btn {
+  width: 100%;
+}

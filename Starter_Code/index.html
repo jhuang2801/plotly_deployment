@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Belly Button Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css"/>
+  <body>
+
+  <div class="container">
+    <div class="row">
+     
+      <div class="col-md-12 jumbotron text-center">
+        <h1 style = "font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5><B>Test Subject ID No.:</b></h5>
+          <p style = "font-family: Serif"> Select test subject from dropdown menu ranging from #940 to #1601</p>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          
+        </div>
+
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title"><b>Demographic Info</b></h3>
+            <br>
+            <p style = "font-family: Serif"> Displays ID#, Ethnicity, Gender, Age, Location (City/State), BB type, and Wfreq of the test subject selected</p>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <h4 class="panel-heading" style = "color:white"> Displaying top 10 bacteria cultures found sorted by OTU ID's of the test subject selected
+      </h4>
+      <div id="bar"></div>
+      </div>
+      <br>
+      <div class="col-md-5">
+        <h4 class="panel-heading" style = "color:white">Displaying the washing frequency of the test subject ID selected from 0 to 10 scrubs per week</h4>
+          
+        <div id="gauge"></div>
+      </div>
+      
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="panel-heading" style = "color:white">Displaying the bubble chart of each bacteria cultures per sample based on OTU ID #</h4>
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+
+</body>
+
+</html>
